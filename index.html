@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xian Jing & Hiuyan - 婚礼邀请函</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+SC:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <p class="welcome-text">Welcome To</p>
+            <p class="wedding-of"><span class="wedding-small">THE</span> Wedding <span class="wedding-small">OF</span></p>
+            
+            <div class="names">
+                <h1 class="couple-names">Xian Jing <span class="ampersand">&</span> Hiuyan</h1>
+            </div>            <!-- Photo -->
+            <div class="gallery-section">
+                <!-- 替换下面的图片链接为你们的照片 -->
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Our Photo" class="hero-photo">
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Event Details -->
+        <section class="details" id="details">
+            <div class="detail-card">
+                <h3>DATE</h3>
+                <p class="detail-main detail-date">2026 . 10 . 25   Sunday</p>
+            </div>
+
+            <div class="detail-card">
+                <h3>TIME</h3>
+                <p class="detail-main detail-accent">7.00pm</p>
+            </div>
+
+            <div class="detail-card">
+                <h3>VENUE</h3>
+                <p class="detail-main detail-accent">Restoran Pekin Johor Jaya</p>
+                <p class="detail-main detail-accent">北京楼 Hall 2</p>
+                <div class="map-links">
+                    <a href="https://maps.app.goo.gl/a7S2mQoHPDB2XuUW7" target="_blank" class="map-btn google-map">
+                        <svg class="map-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#EA4335"/>
+                            <circle cx="12" cy="9" r="2.5" fill="#fff"/>
+                        </svg>
+                        Google Maps
+                    </a>
+                    <a href="https://waze.com/ul?q=Restoran%20Pekin%20Johor%20Jaya&navigate=yes" target="_blank" class="map-btn waze-map">
+                        <img class="map-icon" src="https://www.waze.com/favicon.ico" alt="Waze" onerror="this.style.display='none'">
+                        Waze
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="countdown-section">
+            <h2>COUNTDOWN</h2>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">000</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Mins</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Secs</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- RSVP Section -->
+        <section class="rsvp-section" id="rsvp">
+            <h2>RSVP</h2>
+            <p class="rsvp-subtitle">by 30.09.2026</p>
+
+            <form class="rsvp-form" id="rsvpForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Please enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label>Will you attend the wedding?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="attending" value="yes" required>
+                            <span class="radio-custom"></span>
+                            <span>Yes, I will attend</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="attending" value="no" required>
+                            <span class="radio-custom"></span>
+                            <span>Sorry, I cannot attend</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group attending-details" id="attendingDetails">
+                    <label for="guests">Number of guests</label>
+                    <select id="guests" name="guests">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <div class="form-group attending-details" id="dietaryGroup">
+                    <label for="dietary">Dietary Requirements</label>
+                    <select id="dietary" name="dietary">
+                        <option value="No" selected>No special requirements</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Halal">Halal</option>
+                        <option value="Others">Others (Please specify)</option>
+                    </select>
+                </div>
+
+                <div class="form-group attending-details" id="dietaryOthersGroup" style="display: none;">
+                    <label for="dietaryOthers">请说明您的饮食要求</label>
+                    <input type="text" id="dietaryOthers" name="dietaryOthers" placeholder="例如：过敏、忌口等...">
+                    <span class="error-message" id="dietaryError" style="display: none;">请说明您的饮食要求</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message to us (optional)</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message to us..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <h3>感谢您！</h3>
+                <p>您的回复已收到<br>期待与您共度美好时光</p>
+                <button class="calendar-btn" id="addToCalendarBtn" style="display: none;" onclick="downloadCalendarFile()">
+                    <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/>
+                        <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Add to Calendar
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-names">Xian Jing & Hiuyan</p>
+            <p class="footer-date">2026 · 10 · 25</p>
+        </footer>
+    </main>
+
+    <script src="script.js?v=4"></script>
+</body>
+</html>
