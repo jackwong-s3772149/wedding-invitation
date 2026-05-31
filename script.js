@@ -431,3 +431,14 @@ function initScrollAnimations() {
     });
 
 }
+const music = document.getElementById('bgMusic');
+
+function startMusic() {
+    music.play().catch(err => console.log(err));
+
+    document.removeEventListener('click', startMusic);
+    document.removeEventListener('touchstart', startMusic);
+}
+
+document.addEventListener('click', startMusic);
+document.addEventListener('touchstart', startMusic);
