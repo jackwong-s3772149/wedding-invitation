@@ -56,42 +56,71 @@ function initCountdown() {
 // GALLERY SLIDESHOW
 // ========================================
 
-function initGallerySlideshow() {
-    const photos = document.querySelectorAll('.gallery-photo');
-    const dots = document.querySelectorAll('.dot');
-    
-    if (photos.length === 0) return;
-    
-    let currentIndex = 0;
-    const intervalTime = 4000; // 4 seconds per photo
-    
-    function showPhoto(index) {
-        photos.forEach((photo, i) => {
-            photo.classList.toggle('active', i === index);
+async function initGallerySlideshow() {
+    try {
+        // Fetch images from JSON
+        const response = await fetch('images.json');
+        const data = await response.json();
+        const imageList = data.images;
+        
+        const slideshow = document.getElementById('gallerySlideshow');
+        const dotsContainer = document.getElementById('galleryDots');
+        
+        // Create image elements dynamically
+        imageList.forEach((img, index) => {
+            const imgEl = document.createElement('img');
+            imgEl.src = img.src;
+            imgEl.alt = img.alt;
+            imgEl.className = 'gallery-photo' + (index === 0 ? ' active' : '');
+            slideshow.appendChild(imgEl);
+            
+            // Create dot
+            const dot = document.createElement('span');
+            dot.className = 'dot' + (index === 0 ? ' active' : '');
+            dot.dataset.index = index;
+            dotsContainer.appendChild(dot);
         });
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
+        
+        // Slideshow logic
+        const photos = slideshow.querySelectorAll('.gallery-photo');
+        const dots = dotsContainer.querySelectorAll('.dot');
+        
+        if (photos.length === 0) return;
+        
+        let currentIndex = 0;
+        const intervalTime = 4000; // 4 seconds per photo
+        
+        function showPhoto(index) {
+            photos.forEach((photo, i) => {
+                photo.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            currentIndex = index;
+        }
+        
+        function nextPhoto() {
+            const nextIndex = (currentIndex + 1) % photos.length;
+            showPhoto(nextIndex);
+        }
+        
+        // Auto slideshow
+        let slideInterval = setInterval(nextPhoto, intervalTime);
+        
+        // Click on dots to navigate
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showPhoto(index);
+                // Reset interval when manually navigating
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextPhoto, intervalTime);
+            });
         });
-        currentIndex = index;
+        
+    } catch (error) {
+        console.error('Error loading gallery images:', error);
     }
-    
-    function nextPhoto() {
-        const nextIndex = (currentIndex + 1) % photos.length;
-        showPhoto(nextIndex);
-    }
-    
-    // Auto slideshow
-    let slideInterval = setInterval(nextPhoto, intervalTime);
-    
-    // Click on dots to navigate
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            showPhoto(index);
-            // Reset interval when manually navigating
-            clearInterval(slideInterval);
-            slideInterval = setInterval(nextPhoto, intervalTime);
-        });
-    });
 }
 
 function initDietaryDropdown() {
