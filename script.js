@@ -4,7 +4,7 @@
 // ========================================
 
 // ⚠️ IMPORTANT: Replace this with your Google Apps Script Web App URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyYH2TrXR4c--7UA_OLEzaaX842jSbHhBbzGVdPUBsbFLrMoCaY6D1fkdA-DHjnFlpECw/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxZ-vbr4NIMkpQhu60LRF_BXyNRAcHxYaBbmaqOso3VWQRiAVYiUDZBySZAYTgs6ufY/exec';
 
 document.addEventListener('DOMContentLoaded', function() {
     initCountdown();
