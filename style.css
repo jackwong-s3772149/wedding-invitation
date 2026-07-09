@@ -17,6 +17,7 @@
     --font-sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-names: 'Bodoni Moda', 'Didot', Georgia, serif;
     --font-casual: 'EB Garamond', Georgia, serif;
+    --font-neutra: 'Neutraface 2 Text Light', 'Inter', 'Arial', sans-serif;
     
     --transition: all 0.3s ease;
 }
@@ -97,7 +98,7 @@ body {
 }
 
 .couple-names {
-    font-family: var(--font-casual);
+    font-family: var(--font-neutra);
     font-size: clamp(1.5rem, 5vw, 2.2rem);
     font-weight: 300;
     color: var(--accent);
@@ -106,7 +107,7 @@ body {
 }
 
 .ampersand {
-    font-family: var(--font-casual);
+    font-family: var(--font-neutra);
     font-size: 1em;
     font-weight: 300;
     font-style: normal;
