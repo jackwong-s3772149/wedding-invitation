@@ -101,9 +101,9 @@ body {
 .couple-names {
     font-family: "Snell Roundhand", fantasy;
     font-size: clamp(1rem, 3vw, 2rem);
-    font-weight: 400;
+    font-weight: 700;
     color: var(--accent);
-    letter-spacing: 3.5px;
+    letter-spacing: 3.2px;
     line-height: 1.4;
 }
 
