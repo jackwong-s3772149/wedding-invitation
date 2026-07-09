@@ -18,6 +18,7 @@
     --font-names: 'Bodoni Moda', 'Didot', Georgia, serif;
     --font-casual: 'EB Garamond', Georgia, serif;
     --font-neutra: 'Neutraface 2 Text Light', 'Inter', 'Arial', sans-serif;
+    --font-nickainley: 'Candlescript', 'Georgia', serif;
     
     --transition: all 0.3s ease;
 }
@@ -78,7 +79,7 @@ body {
     font-size: clamp(3rem, 10vw, 5rem);
     font-weight: 400;
     color: var(--black);
-    letter-spacing: 1.5px;
+    letter-spacing: 0.3px;
     margin-bottom: 40px;
 }
 
@@ -90,7 +91,7 @@ body {
     text-transform: uppercase;
     vertical-align: middle;
     color: var(--gray);
-    margin: 0 10px;
+    margin: 0 6px;
 }
 
 .names {
@@ -98,9 +99,9 @@ body {
 }
 
 .couple-names {
-    font-family: var(--font-neutra);
+    font-family: var(--font-nickainley);
     font-size: clamp(1.0rem, 3.5vw, 1.5rem);
-    font-weight: 300;
+    font-weight: 400;
     color: var(--accent);
     letter-spacing: 2px;
     line-height: 1.4;
@@ -211,7 +212,7 @@ body {
    ======================================== */
 
 .divider {
-    width: 60px;
+    width: 140px;
     height: 1px;
     background: var(--accent);
     opacity: 0.3;
@@ -331,6 +332,21 @@ body {
     gap: 40px;
 }
 
+.countdown-illustration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.countdown-sketch {
+    width: min(1000px, 100%);
+    height: auto;
+    display: block;
+    opacity: 0.95;
+}
+
 .countdown-item {
     display: flex;
     flex-direction: column;
@@ -366,7 +382,7 @@ body {
 
 .rsvp-section h2 {
     font-family: var(--font-sans);
-    font-size: 1.2rem;
+    font-size: 2.1rem;
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -376,7 +392,7 @@ body {
 
 .rsvp-subtitle {
     font-family: var(--font-sans);
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: var(--gray);
     margin-bottom: 40px;
@@ -606,11 +622,11 @@ body {
 }
 
 .footer-names {
-    font-family: var(--font-names);
+    font-family: var(--font-neutra);
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 900;
     color: var(--dark-gray);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
