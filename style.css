@@ -99,11 +99,11 @@ body {
 }
 
 .couple-names {
-    font-family: var(--font-nickainley);
-    font-size: clamp(1.0rem, 3.5vw, 1.5rem);
-    font-weight: 400;
+    font-family: "Snell Roundhand", fantasy;
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 100;
     color: var(--accent);
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     line-height: 1.4;
 }
 
@@ -251,6 +251,7 @@ body {
 .detail-date,
 .detail-accent {
     color: var(--accent);
+    letter-spacing: 2px;
 }
 
 .detail-sub {
