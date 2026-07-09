@@ -78,7 +78,7 @@ body {
     font-size: clamp(3rem, 10vw, 5rem);
     font-weight: 400;
     color: var(--black);
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     margin-bottom: 40px;
 }
 
@@ -86,11 +86,11 @@ body {
     font-family: var(--font-sans);
     font-size: 0.22em;
     font-weight: 400;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     vertical-align: middle;
     color: var(--gray);
-    margin: 0 25px;
+    margin: 0 10px;
 }
 
 .names {
@@ -99,10 +99,10 @@ body {
 
 .couple-names {
     font-family: var(--font-neutra);
-    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    font-size: clamp(1.0rem, 3.5vw, 1.5rem);
     font-weight: 300;
     color: var(--accent);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     line-height: 1.4;
 }
 
