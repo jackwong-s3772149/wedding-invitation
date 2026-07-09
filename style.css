@@ -103,7 +103,7 @@ body {
     font-size: clamp(1rem, 3vw, 2rem);
     font-weight: 400;
     color: var(--accent);
-    letter-spacing: 4px;
+    letter-spacing: 3.5px;
     line-height: 1.4;
 }
 
