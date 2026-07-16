@@ -23,6 +23,15 @@
     --transition: all 0.3s ease;
 }
 
+@font-face {
+    font-family: 'MyHandwritingFont';
+    src: url('/fonts/my-handwriting-font.woff2') format('woff2'),
+         url('/fonts/my-handwriting-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -145,7 +154,67 @@ body {
    ======================================== */
 
 .gallery-section {
-    padding: 30px 0;
+    padding: 30px 0 28px;
+}
+
+.welcome-message {
+    width: min(100%, 500px);
+    margin: 8px auto 0;
+    padding: 16px 24px 14px;
+    text-align: center;
+    color: var(--dark-gray);
+    font-family: var(--font-serif);
+    font-size: 1rem;          /* Fixed */
+    font-weight: 400;          /* Optional */
+    line-height: 1.4;
+    letter-spacing: 0.45px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(107, 16, 16, 0.12);
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.welcome-message::before,
+.welcome-message::after {
+    content: "“";
+    position: absolute;
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--accent);
+    opacity: 0.3;
+    top: 10px;
+    line-height: 1;
+}
+
+.welcome-message::before {
+    left: 10px;
+}
+
+.welcome-message::after {
+    content: "”";
+    right: 10px;
+    top: auto;
+    bottom: 10px;
+}
+
+/* Default paragraph spacing */
+.welcome-message p {
+    margin: 0 0 6px;
+    font-family: var(--font-serif);
+}
+
+/* Intro paragraph */
+.welcome-message p.welcome-message-intro {
+    margin-bottom: 2rem;
+    font-weight: 'normal';
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+}
+
+/* Paragraphs with extra spacing below */
+.welcome-message p.section-break {
+    margin-bottom: 2rem;
 }
 
 .hero-photo {
@@ -213,10 +282,10 @@ body {
 
 .divider {
     width: 140px;
-    height: 1px;
+    height: 0.2px;
     background: var(--accent);
     opacity: 0.3;
-    margin: 60px auto;
+    margin: 8px auto 24px;   /* top right/left bottom */
 }
 
 /* ========================================
